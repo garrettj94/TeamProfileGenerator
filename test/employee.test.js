@@ -1,7 +1,7 @@
 const employee = require("./lib/employee");
 
 describe("Employee", () => {
-  describe("Initialization", () => {
+  describe("postion", () => {
     it("will show the employees name", () => {
       const obj = new employee();
 
