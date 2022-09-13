@@ -8,20 +8,20 @@ describe("Employee", () => {
       expect("employee" in obj).toEqual(true);
     });
 
-    // it("should set 'number' when created", () => {
-    //   const num = 108;
+    it("should set 'Postion' when created", () => {
+      const Postion = manager;
 
-    //   const obj = new Arithmetic(num);
+      const obj = new Postion(manager);
 
-    //   expect(obj.number).toEqual(num);
-    // });
+      expect(obj.Postion).toEqual(manager);
+    });
 
-//     it("should default 'number' to 0", () => {
-//       const obj = new Arithmetic();
+  //   it("should default 'number' to 0", () => {
+  //     const obj = new Arithmetic();
 
-//       expect(obj.number).toEqual(0);
-//     });
-//   });
+  //     expect(obj.number).toEqual(0);
+  //   });
+  // });
 
 //   describe("plus", () => {
 //     it("should return a new 'Arithmetic' object", () => {
