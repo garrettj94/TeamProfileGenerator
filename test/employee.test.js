@@ -17,4 +17,3 @@ describe("Employee", () => {
     });
   });
 });
-//blank arry to push data through index.js
