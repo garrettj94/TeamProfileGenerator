@@ -1,21 +1,15 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Employee = require("./lib/employee");
 const Manager = require('./lib/manager')
 const Intern = require('./lib/intern');
 const Engenier = require('./lib/engenier');
-const generateHTML = require('./lib/html');
+const generateHTML = require('./src/html');
 let teamMembers = [];
 //runnung class contrutors put in someiothng to say fuction for next question so that havter they enter name then can enter job title
 //take data and put into  ghtml (teamMember comes into play) .push into an array
 // make function called addinterin addengenier  inquire promt
 inquirer
     .prompt([
-        {
-            type: 'input',
-            message: 'What is your job title?',
-            name: 'job title',
-        },
         {
             type: 'input',
             message: 'What is your name?',
@@ -52,9 +46,9 @@ inquirer
 
 
     ])
-    .then((response) => {
-        console.log(response)
-        if (choices === 'add engeiner') {
+    .then( response => {
+    
+        if (response.choices === 'add engeiner') {
             addenginer()
             inquirer
             .prompt([
@@ -89,7 +83,7 @@ inquirer
                 },
             ])
 
-        }else if (choices === 'add intern'){
+        }else if (response.choices === 'add intern'){
             addintern()
             inquirer
             .prompt([
@@ -123,11 +117,11 @@ inquirer
                     name: 'school',
 
                 },
-            ]).then((response)=>{
+            ]).then(()=>{
                 fs.writeFile('index.html', generateHTML(teamMembers), (err) =>
                 err ? console.error(err) : console.log('Success!')
             )
-            teamMembers.push(Manager, Intern, Engenier);
+            teamMembers.push( Manager, Intern, Engenier);
 
 
         })}
