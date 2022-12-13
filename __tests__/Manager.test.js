@@ -2,19 +2,19 @@ const Manager = require("../lib/manager");
 
 
 describe("manager", () => {
-    describe("postion", () => {
-        it("will show the employees name", () => {
-            const obj = new employee();
+    describe("position", () => {
+        it("will show the managers name", () => {
+            const obj = new manager();
 
-            expect("employee" in obj).toEqual(true);
+            expect("manager" in obj).toEqual(true);
         });
 
-        it("should set 'Postion' when created", () => {
-            const Postion = ('');
+        it("should set 'Position' when created", () => {
+            const Position = ('');
 
-            const obj = new Postion(Manager);
+            const obj = new Position(Manager);
 
-            expect(obj.Postion).toEqual(Manager);
+            expect(obj.Position).toEqual(Manager);
         });
     });
 });
